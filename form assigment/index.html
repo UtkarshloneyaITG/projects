@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+  <div class="form">
+    <div class="from-upper-grid">
+      <div class="flex-div">
+        <label for="fname">First name</label>
+        <input type="text" id="fname">
+        <p id="fnameError"> </p>
+      </div>
+      <div class="flex-div">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname">
+        <p id="lnameError"> </p>
+      </div>
+      <div class="flex-div">
+        <label for="email">Email</label>
+        <input type="text" id="email">
+        <p id="emailError"> </p>
+      </div>
+      <div class="flex-div">
+        <label for="phone">Phone</label>
+        <input type="text" id="phone">
+        <p id="phoneError"> </p>
+      </div>
+    </div>
+    <div class="radiocontainer">
+      <span>Gender : </span>
+      <label for="gender_male">Male
+        <input type="radio" name="gender" id="gender_male" value="male">
+      </label>
+      <label for="gender_female">Female
+        <input type="radio" name="gender" id="gender_female" value="female">
+      </label>
+      <label for="gender_other">Other
+        <input type="radio" name="gender" id="gender_other" value="other">
+      </label>
+      <p id="radioError"></p>
+    </div>
+    <div>
+      <label for="class">Class</label>
+      <select name="class" id="class">
+        <option value="selectclass">Select class</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+      <p id="classError"></p>
+    </div>
+    <div class="flex-div">
+      <label for="address">Address</label>
+      <textarea id="address" rows="10" cols="30" style="resize: none;">
+      </textarea>
+      <p id="addressError"></p>
+    </div>
+    <div class="hobbys">
+      <span> Hobby : </span>
+      <div class="hobby-grid">
+      <div class="flex-div">
+        <label for="hobby-cricket">Cricket
+          <input type="checkbox" id="hobby-cricket" value="Cricket">
+        </label>
+      </div>
+      <div class="flex-div">
+        <label for="hobby-drawing">drawing
+          <input type="checkbox" id="hobby-drawing" value="drawing">
+        </label>
+      </div>
+      <div class="flex-div">
+        <label for="hobby-chess">chess
+          <input type="checkbox" id="hobby-chess" value="Chess">
+        </label>
+      </div>
+      <div class="flex-div">
+        <label for="hobby-running">running
+          <input type="checkbox" id="hobby-running" value="running">
+        </label>
+      </div>
+      <div class="flex-div">
+        <label for="hobby-other">Other
+          <input type="checkbox" id="hobby-other" value="other">
+        </label>
+      </div>
+      </div>
+      <p id="hobbyError"></p>
+    </div>
+    <div class="flex-div">
+      <label for="password">password</label>
+      <input type="password" id="password">
+      <p id="passwordError"></p>
+    </div>
+    <div class="flex-div">
+      <label for="conform-password">Confirm Password</label>
+      <input type="password" id="conform-password">
+      <p id="conformpasswordError"></p>
+    </div>
+    <div class="flex-div">
+      <button onclick="formSubmit()">Submit</button>
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
