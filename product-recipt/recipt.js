@@ -22,8 +22,8 @@ let totals = 0
   
   object.products.forEach(element => {
     let p = document.createElement('p')
-    p.innerHTML = `<span>${element.product} : ${element.price} X ${element.Qunt} = ${element.total}</span>`
+    p.innerHTML = `<span>${element.product} : ${element.price}₹ ✕ ${element.Qunt} = ${element.total} ₹</span>`
     product.appendChild(p)
    totals += Number.parseInt(element.total)
-    total.innerText = totals
+    total.innerText = totals + '₹'
   });
