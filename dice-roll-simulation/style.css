@@ -53,6 +53,9 @@ button {
   height: 30px;
   width: 30px;
 }
+.dice-log--log>div>img {
+  border-radius: 3px;
+}
 .dice-log--log {
   display: flex;
   justify-content: space-between;
