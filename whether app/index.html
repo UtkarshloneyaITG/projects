@@ -12,14 +12,16 @@
   <div class="weather-container">
     <h1>🌤 Weather Forecast</h1>
     <div class="search-box">
-      <input type="text" placeholder="Search city..."  id="city"/>
+      <input type="text" placeholder="Search city..." id="city" />
       <button onclick="updater(city.value)">Search</button>
     </div>
-
+      <div class="error">
+    </div>
+<div class="whether_app">
     <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon" class="weather-icon" />
-    <div class="temperature">24°C</div>
-    <div class="description">Clear sky</div>
-    <div class="cityName">Dewas</div>
+    <div class="temperature">0.0ºC</div>
+    <div class="description"></div>
+    <div class="cityName"></div>
     <div class="details">
       <div>
         <strong>Humidity</strong><br />
@@ -34,7 +36,10 @@
         <span class="Pressure"></span>
       </div>
     </div>
-    <div class="error">
+  
+    </div>
+    <div class="center-loader">
+    <div class="loader"></div>
     </div>
   </div>
   <script src="script.js"></script>
