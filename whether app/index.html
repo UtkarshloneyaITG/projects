@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="weather-container">
+    <h1>🌤 Weather Forecast</h1>
+    <div class="search-box">
+      <input type="text" placeholder="Search city..."  id="city"/>
+      <button onclick="updater(city.value)">Search</button>
+    </div>
+
+    <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon" class="weather-icon" />
+    <div class="temperature">24°C</div>
+    <div class="description">Clear sky</div>
+    <div class="cityName">Dewas</div>
+    <div class="details">
+      <div>
+        <strong>Humidity</strong><br />
+        <span class="Humidity"></span>
+      </div>
+      <div>
+        <strong>Wind</strong><br />
+        <span class="Wind"></span>
+      </div>
+      <div>
+        <strong>Pressure</strong><br />
+        <span class="Pressure"></span>
+      </div>
+    </div>
+    <div class="error">
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
