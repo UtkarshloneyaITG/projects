@@ -12,36 +12,71 @@
   <div class="weather-container">
     <h1>🌤 Weather Forecast</h1>
     <div class="search-box">
+      <button onclick="ShowMyLocationWhether()">My location</button>
       <input type="text" placeholder="Search city..." id="city" />
       <button onclick="updater(city.value)">Search</button>
     </div>
-      <div class="error">
+    <div class="error">
     </div>
-<div class="whether_app">
-    <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon" class="weather-icon" />
-    <div class="temperature">0.0ºC</div>
-    <div class="description"></div>
-    <div class="cityName"></div>
-    <div class="details">
-      <div>
-        <strong>Humidity</strong><br />
-        <span class="Humidity"></span>
+    <div class="whether_app">
+      <div class="whether_app_inner">
+        <div class="main_grid">
+          <img src="https://openweathermap.org/img/wn/01d@2x.png" alt="Weather Icon" class="weather-icon" />
+          <div class="temperature">0.0ºC</div>
+          <div class="description"></div>
+          <div class="flag_name"><span class="Country_name"></span><img src="" alt="country flag" class="country_flag">
+          </div>
+          <div class="cityName"></div>
+        </div>
+        <div class="details">
+          <div>
+            <div class="image">
+              <img src="media/humidity.png" alt="humidity" width="100%" height="100%">
+            </div>
+            <strong>Humidity</strong><br />
+            <span class="Humidity"></span>
+          </div>
+          <div>
+            <div class="image">
+              <img src="media/vecteezy_hand-drawn-doodle-wind-blow-clip-art_22185109.png" alt="wind" width="100%"
+                height="100%">
+            </div>
+            <strong>Wind</strong><br />
+            <span class="Wind"></span>
+          </div>
+          <div>
+            <div class="image">
+              <img src="media/atmospheric.png" alt="Pressure" width="100%" height="100%">
+            </div>
+            <strong>Pressure</strong><br />
+            <span class="Pressure"></span>
+          </div>
+          <div>
+            <div class="image">
+              <img src="media/hot.png" alt="Pressure" width="100%" height="100%">
+            </div>
+            <strong>Feels like</strong><br />
+            <span class="feels_like"></span>
+          </div>
+          <div>
+            <div class="image">
+              <img src="media/vecteezy_hand-drawn-doodle-vaporize-icon_22183370.png" alt="Pressure" width="100%"
+                height="100%">
+            </div>
+            <strong>gust</strong><br />
+            <span class="gust"></span>
+          </div>
+
+        </div>
+
       </div>
-      <div>
-        <strong>Wind</strong><br />
-        <span class="Wind"></span>
-      </div>
-      <div>
-        <strong>Pressure</strong><br />
-        <span class="Pressure"></span>
-      </div>
-    </div>
-  
+
     </div>
     <div class="center-loader">
-    <div class="loader"></div>
+      <div class="loader"></div>
     </div>
   </div>
+  <script src="country_code_with_name.js"></script>
   <script src="script.js"></script>
 </body>
 
