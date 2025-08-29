@@ -1,0 +1,172 @@
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #222;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 1rem 2rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav button {
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+    }
+
+    .create-post button {
+      padding: 10px;
+    }
+
+    main {
+      display: flex;
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+    }
+
+    section {
+      flex: 3;
+    }
+
+    aside {
+      flex: 1;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .article {
+      background: #fff;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .article button {
+      padding: 10px;
+      background-color: white;
+      border: none;
+      border: 0.1px solid gray;
+      border-bottom: 2px solid gray;
+      border-radius: 10px;
+      margin: 10px;
+      box-shadow: 0px 10px 15px #0005;
+    }
+
+    .article button:active {
+      background-color: red;
+    }
+
+    .article button+button:active {
+      background-color: greenyellow;
+    }
+
+    .article h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 700px) {
+      main {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 1rem;
+      }
+
+      aside {
+        margin-bottom: 2rem;
+      }
+    }
+
+
+    /* HTML: <div class="loader"></div> */
+    .loader {
+      height: 60px;
+      aspect-ratio: 2;
+      border-bottom: 3px solid #0000;
+      background:
+        linear-gradient(90deg, #524656 50%, #0000 0) -25% 100%/50% 3px repeat-x border-box;
+      position: relative;
+      animation: l3-0 .75s linear infinite;
+    }
+
+    .loader:before {
+      content: "";
+      position: absolute;
+      inset: auto 42.5% 0;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: #CF4647;
+      animation: l3-1 .75s cubic-bezier(0, 900, 1, 900) infinite;
+    }
+
+    @keyframes l3-0 {
+      to {
+        background-position: -125% 100%
+      }
+    }
+
+    @keyframes l3-1 {
+
+      0%,
+      2% {
+        bottom: 0%
+      }
+
+      98%,
+      to {
+        bottom: .1%
+      }
+    }
+
+    .loader-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 500px;
+      margin: 20px auto;
+    }
+
+    .form input,
+    .form textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 100%;
+      resize: vertical;
+      box-sizing: border-box;
+    }
+
+    .create-post-section {
+      display: none;
+    }

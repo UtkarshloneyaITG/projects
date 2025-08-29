@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Blog Manager</h1>
+
+    <nav>
+      <button onclick="toggleHome()">Home</button>
+      <button onclick="toggleNewPost()">New Post</button>
+      <button>Categories</button>
+      <button>About</button>
+    </nav>
+  </header>
+  <main>
+
+    <section class="recent-posts">
+      <h2>All Post</h2>
+      <div class="article-container">
+        <div class="loader-container">
+          <div class="loader"></div>
+        </div>
+      </div>
+    </section>
+    <section class="create-post-section">
+      <div class="heading">
+        <h2 style="text-align: center;">Create blog</h2>
+      </div>
+      <div class="create-post">
+        <div class="form">
+          <input type="text" id="name" placeholder="Name" required>
+          <input type="text" id="title" placeholder="Title" required>
+          <textarea name="Content" id="Content" required>
+          </textarea>
+          <button onclick="createPost()">Post</button>
+          <button onclick="cancel()">Cancel</button>
+        </div>
+      </div>
+    </section>
+    <!-- <section class="edit-post">
+         <div class="form">
+          <input type="text" id="name" placeholder="Name" required>
+          <input type="text" id="title" placeholder="Title" required>
+          <textarea name="Content" id="Content" required>
+          </textarea>
+          <button onclick="createPost()">Post</button>
+          <button onclick="cancel()">Cancel</button>
+        </div>
+      </div>
+    </section> -->
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Blog Manager. All rights reserved.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
