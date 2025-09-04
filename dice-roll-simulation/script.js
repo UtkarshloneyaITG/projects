@@ -10,7 +10,7 @@ function randomDiceFliper() {
   button.disabled = true
   roll++
   dice.classList.toggle('animetion')
-  randomNumber = Math.floor(Math.random() * 6) + 1
+  randomNumber = Math.floor(Math.random() * 8) + 1
   setTimeout(() => {
     button.disabled = false
     let src = `media/dice-six-faces-${randomNumber}.png`
@@ -18,7 +18,7 @@ function randomDiceFliper() {
     createDiceLog()
 
   }, 1000)
-
+  document.getElementById('dicea').innerText = randomNumber
 }
 
 function createDiceLog() {

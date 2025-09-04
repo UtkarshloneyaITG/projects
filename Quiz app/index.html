@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="loading_screen">
+      <div class="loader"></div>
+    </div>
+    <div class="leader-board">
+      <div class="leader-board-grid">
+        <div class="leader-board-heading">
+          <h2>leader board</h2>
+        </div>
+        <div class="leader-board-button">
+          <button onclick="NamePage()">Attempt Quiz</button>
+        </div>
+        <div class="leader-board-inner">
+          <div class="leader-board-inner-heading">
+            Top 10 Leaderboard
+          </div>
+          <div class="leader-board-names">
+            <div><span>Rank</span><span>Name</span><span>Score</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="name_input">
+      <div class="heading_name">
+        <h2>Enter Your Name</h2>
+      </div>
+      <input type="text" required id="input">
+      <button onclick="quizPage()">Enter</button>
+    </div>
+    <div class="Question-board">
+      <div>
+        <span class="QuestionNo">1/10</span>
+        <h2 class="Quizquestion">Question</h2>
+      </div>
+      <div class="options">
+        <p>Option 1</p>
+        <p>Option 2</p>
+        <p>Option 3</p>
+        <p>Option 4</p>
+      </div>
+      <div>
+        <button onclick="submit()">Next</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

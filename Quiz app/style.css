@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: 0.3s;
+}
+
+body {
+  background-color: rgb(34, 34, 34);
+}
+
+.container {
+  max-width: 1600px;
+  margin: auto;
+  position: relative;
+}
+
+.loading_screen {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.leader-board,
+.Question-board {
+  margin: 20px auto;
+  width: 600px;
+  height: fit-content;
+  background-color: gray;
+  border-radius: 20px;
+  text-align: center;
+
+}
+
+.leader-board-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  border-bottom: 5px solid gray;
+  box-shadow: 0px 10px 25px #0005;
+  border-radius: 20px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.leader-board-names div {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  padding: 10px 30px;
+  font-size: 20px;
+  border: 2px solid black;
+  margin: 10px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgb(153, 153, 153);
+  transition: 0.3s;
+}
+
+.leader-board-names div:hover {
+  transform: scale(1.10);
+}
+
+.leader-board-names span {
+  display: inline-block;
+}
+
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.options p {
+  width: 90%;
+  background-color: grey;
+  padding: 10px;
+  border-radius: 100px;
+  border: 2px solid black;
+}
+
+.Question-board {
+  margin-top: 100px;
+  width: fit-content;
+  display: none;
+}
+
+.Question-board>div {
+  padding: 10px;
+
+}
+
+button {
+  padding: 13px 36px;
+  background: gray;
+  width: 100%;
+  background-color: green;
+  border-radius: 100px;
+  border: 1px solid black;
+}
+
+.name_input {
+  width: 500px;
+  background-color: gray;
+  margin: 100px auto;
+  padding: 50px;
+  border-radius: 10px;
+  text-align: center;
+  display: none;
+}
+
+.name_input input,
+.name_input button {
+  border: 10px;
+  padding: 10px;
+  width: 400px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 20px;
+  aspect-ratio: 1;
+  background: #25b09b;
+  box-shadow: 0 0 60px 15px #25b09b;
+  transform: translate(-80px);
+  clip-path: inset(0);
+  animation:
+    l4-1 0.5s ease-in-out infinite alternate,
+    l4-2 1s ease-in-out infinite;
+}
+
+@keyframes l4-1 {
+  100% {
+    transform: translateX(80px)
+  }
+}
+
+@keyframes l4-2 {
+  33% {
+    clip-path: inset(0 0 0 -100px)
+  }
+
+  50% {
+    clip-path: inset(0 0 0 0)
+  }
+
+  83% {
+    clip-path: inset(0 -100px 0 0)
+  }
+}
