@@ -20,18 +20,17 @@ function phoneNumberChecker(number) {
   let Pnumber = /\D/.test(number)
   return number.trim().length == 10 && !Pnumber
 }
-let arrayOfproducts = []
+let arrayOfproducts = [] 
 let productsWithPrice = {
   Tshirt: 400,
   hoddies: 900,
   cap: 200,
-  shoes: 1200,
+  shoes: 1200,  
   bag: 700
 }
 let date = new Date();
 let year = date.getFullYear();
-let month = date.getMonth()
-let days = date.getDate();
+ let days = date.getDate();
 let hours = date.getHours();
 let minutes = date.getMinutes();
 let seconds = date.getMinutes();

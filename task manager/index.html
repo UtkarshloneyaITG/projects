@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="task-manager-inner">
+        <div class="task-manager-grid">
+          <div class="task-manager-header">
+            <h1>Task Manager</h1>
+            <p>Manage your tasks and notes with style.Add Task</p>
+          </div>
+          <div class="task-manager-buttons">
+            <button onclick="addTaskPopUp()">Add task</button>
+            <button onclick="renderTask()">View All tasks</button>
+            <button>Add notes</button>
+          </div>
+        </div>
+        <div class="add-task-box">
+          <div class="add-task-heading">
+            <h2>Add Task</h2>
+            <button onclick="returnToMainMenu()">❌</button>
+          </div>
+          <form class="add-task-body">
+            <input type="text" id="task" required placeholder="Task title" />
+            <textarea
+              id="task-info"
+              rows="10"
+              placeholder="Task description (optional)"
+            ></textarea>
+            <input type="date" id="dueData" required />
+            <select id="priroty">
+              <option value="high">🔴High</option>
+              <option value="medium">🟡MEdium</option>
+              <option value="low">🟢Low</option>
+            </select>
+            <button type="submit">Add Task</button>
+          </form>
+        </div>
+        <div class="all-task-viewer">
+          <div class="add-task-heading">
+            <h2>Add Task</h2>
+            <button onclick="close_all_task()">❌</button>
+          </div>
+          <div class="all-task-container">
+            <div class="task-info-contain">
+              <div class="task-left">
+                <div><div class="priroty-bar"></div></div>
+                <div>
+                  <h3>task 1</h3>
+                  <p>Due : 22-2-26 - priroty - 🔴High</p>
+                  <span>discription dissdissdissdissdissdissdissdis</span>
+                </div>
+              </div>
+              <div class="task-right">
+                <button>✔️</button>
+                <button>🗑️</button>
+              </div>
+            </div>
+            <div class="task-info-contain">
+              <div class="task-left">
+                <div><div class="priroty-bar"></div></div>
+                <div>
+                  <h3>task 1</h3>
+                  <p>Due : 22-2-26 - priroty - 🔴High</p>
+                  <span>discription dissdissdissdissdissdissdissdis</span>
+                </div>
+              </div>
+              <div class="task-right">
+                <button>✔️</button>
+                <button>🗑️</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="notes-page">
+          <div class="notes-heading">
+            <h2>Add notes</h2>
+          </div>
+          <div class="note-form--">
+            <form id="note-form" >
+              <input type="text" required>
+            </form>
+          </div>
+          <div class="note-container">
+            <div>
+              <p>sdfasdf</p>
+              <button>❌</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
