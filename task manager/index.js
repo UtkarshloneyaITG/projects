@@ -6,18 +6,28 @@ let taskDiscription = document.getElementById("task-info");
 let taskDue = document.getElementById("dueData");
 let priroty = document.getElementById("priroty");
 let all_task_container = document.querySelector(".all-task-container");
+let note_container = document.querySelector(".note-container");
+let note_form = document.getElementById("note-form");
+let note_text_area = document.getElementById("note-textarea");
+let notes_page = document.querySelector(".notes-page");
 
 let task_manager_grid = document.querySelector(".task-manager-grid");
 let add_task_box = document.querySelector(".add-task-box");
 let all_task_viewer = document.querySelector(".all-task-viewer");
 
 let localTask = localStorage.getItem("task");
+let localNotes = localStorage.getItem("notes");
+
 let arrayOfTasks = [];
+let arrayOfNotes = [];
 let tasks = JSON.parse(localTask);
+let note = JSON.parse(localNotes);
 if (tasks) {
   arrayOfTasks = tasks;
 }
-
+if (note) {
+  arrayOfNotes = note;
+}
 task_form.addEventListener("submit", (e) => {
   e.preventDefault();
   let obj = {
@@ -34,10 +44,17 @@ task_form.addEventListener("submit", (e) => {
   console.log(obj);
   arrayOfTasks.push(obj);
   localStorage.setItem("task", JSON.stringify(arrayOfTasks));
-   task_manager_grid.style.display = "block";
+  task_manager_grid.style.display = "block";
   add_task_box.style.display = "none";
 });
-
+note_form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  arrayOfNotes.push(note_text_area.value);
+  note_text_area.value = "";
+  localStorage.setItem("notes", JSON.stringify(arrayOfNotes));
+  renderNotes();
+  console.log(arrayOfNotes);
+});
 function renderTask() {
   task_manager_grid.style.display = "none";
   all_task_viewer.style.display = "block";
@@ -99,7 +116,33 @@ function returnToMainMenu() {
   add_task_box.style.display = "none";
 }
 
-function close_all_task(){
+function close_all_task() {
   task_manager_grid.style.display = "block";
   all_task_viewer.style.display = "none";
+}
+
+function renderNotes() {
+  note_container.innerHTML = "";
+  arrayOfNotes.reverse().forEach((value, index) => {
+    let div = document.createElement("div");
+    div.innerHTML = `
+              <p>${value}</p>
+              <button onclick='delete_notes(${index})'>❌</button>
+    `;
+    note_container.appendChild(div);
+  });
+}
+function delete_notes(ind) {
+  arrayOfNotes.splice(ind, 1);
+  localStorage.setItem("notes", JSON.stringify(arrayOfNotes));
+  renderNotes();
+}
+function returnToMainMenu_notes() {
+  notes_page.style.display = "none";
+  task_manager_grid.style.display = "block";
+}
+function open_notes() {
+  renderNotes();
+  notes_page.style.display = "block";
+  task_manager_grid.style.display = "none";
 }

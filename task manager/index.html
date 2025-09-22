@@ -17,7 +17,7 @@
           <div class="task-manager-buttons">
             <button onclick="addTaskPopUp()">Add task</button>
             <button onclick="renderTask()">View All tasks</button>
-            <button>Add notes</button>
+            <button onclick="open_notes()">Add notes</button>
           </div>
         </div>
         <div class="add-task-box">
@@ -46,52 +46,20 @@
             <h2>Add Task</h2>
             <button onclick="close_all_task()">❌</button>
           </div>
-          <div class="all-task-container">
-            <div class="task-info-contain">
-              <div class="task-left">
-                <div><div class="priroty-bar"></div></div>
-                <div>
-                  <h3>task 1</h3>
-                  <p>Due : 22-2-26 - priroty - 🔴High</p>
-                  <span>discription dissdissdissdissdissdissdissdis</span>
-                </div>
-              </div>
-              <div class="task-right">
-                <button>✔️</button>
-                <button>🗑️</button>
-              </div>
-            </div>
-            <div class="task-info-contain">
-              <div class="task-left">
-                <div><div class="priroty-bar"></div></div>
-                <div>
-                  <h3>task 1</h3>
-                  <p>Due : 22-2-26 - priroty - 🔴High</p>
-                  <span>discription dissdissdissdissdissdissdissdis</span>
-                </div>
-              </div>
-              <div class="task-right">
-                <button>✔️</button>
-                <button>🗑️</button>
-              </div>
-            </div>
-          </div>
+          <div class="all-task-container"></div>
         </div>
         <div class="notes-page">
           <div class="notes-heading">
             <h2>Add notes</h2>
+            <button onclick="returnToMainMenu_notes()">❌</button>
           </div>
           <div class="note-form--">
-            <form id="note-form" >
-              <input type="text" required>
+            <form id="note-form">
+              <textarea required id="note-textarea"></textarea>
+              <button type="submit">ADD</button>
             </form>
           </div>
-          <div class="note-container">
-            <div>
-              <p>sdfasdf</p>
-              <button>❌</button>
-            </div>
-          </div>
+          <div class="note-container"></div>
         </div>
       </div>
     </div>

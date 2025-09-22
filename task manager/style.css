@@ -98,19 +98,22 @@ body {
   transform: translateY(3px);
 }
 
-.add-task-heading {
+.add-task-heading,
+.notes-heading {
   display: flex;
   padding: 5px;
   justify-content: space-between;
 }
 
-.add-task-heading button {
+.add-task-heading button,
+.notes-heading button {
   background-color: transparent;
   border: none;
   transition: 0.3s;
 }
 
-.add-task-heading button:hover {
+.add-task-heading button:hover,
+.notes-heading button:hover {
   transform: scale(1.4);
 }
 
@@ -180,4 +183,78 @@ body {
 
 .all-task-viewer {
   display: none;
+}
+
+.note-container>div {
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(58, 58, 58);
+  margin: 8px;
+}
+
+.note-form-- textarea {
+  resize: none;
+  padding: 10px;
+  width: 80%;
+  border-radius: 10px 0px 0px 10px;
+  border: none;
+  outline: none;
+}
+
+#note-form {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.note-form-- button {
+  padding: 16px;
+  background-color: greenyellow;
+  border: none;
+
+  border-radius: 0px 10px 10px 0px;
+  transition: 0.3s;
+}
+
+.note-form-- button:hover {
+  background-color: green;
+  color: white;
+}
+
+.note-form-- {
+  border-radius: 10px;
+  padding: 20px 0px
+}
+
+.notes-page {
+  width: 500px;
+  display: none;
+}
+
+.all-task-container {
+  overflow: auto;
+  height: 395px;
+}
+
+.all-task-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.all-task-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.all-task-container::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.all-task-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
